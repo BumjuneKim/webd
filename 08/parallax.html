@@ -24,8 +24,22 @@
 		</style>	
 	</head>	
 	<body>	
-		<section id="sky">
+		<section id="sky" data-type="background" data-speed="0.1">
 			<article><img src="images/balloon.png"></article>
 		</section>				
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				const wd = $(window);
+				$('section[data-type="background"]').each(function() {
+					const bg = $(this);
+					$(window).scroll(function() {
+						const yPos = -(wd.scrollTop() / bg.data('speed'));
+						const coords = '50%' + yPos + 'px';
+						bg.css({backgroundPosition: coords});
+					});
+				});
+			});
+		</script>
 	</body>
 </html>
