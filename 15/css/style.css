@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 * {
   margin:0;
@@ -96,6 +97,12 @@ section:nth-child(odd) {
   background:transparent;
 }
 
+@media screen and (min-width: 764px) {
+  .wrapper {
+    max-width: 1300px;
+    margin:0 auto;
+  }
+}
 
 /*  헤더 */ 
 .banner {
@@ -111,6 +118,8 @@ section:nth-child(odd) {
 }
 .msg p {
   color: #ff6600;
+  font-family: 'Nanum Myeongjo', 돋움;
+  font-weight: 700;
   font-size:1.4em;
   font-style: italic;
   text-align:center;
@@ -144,6 +153,27 @@ section:nth-child(odd) {
   display:none;
 }
 
+@media screen and (min-width: 764px) {
+  .intro {
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .text {
+    flex: 2;
+  }
+
+  .img {
+    display: block;
+    flex: 1;
+  }
+
+  .img > img {
+    max-width: 250px;
+  }
+}
+
 
 /* 교육 프로그램 영역 */
 .program-list{
@@ -159,6 +189,17 @@ section:nth-child(odd) {
   margin-bottom:20px;
   background-color:#fff;
   border:1px solid #aaa;  
+}
+
+@media screen and (min-width: 764px) {
+  .program-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .program {
+    flex-basis: 22%;
+  }
 }
 
 
@@ -185,3 +226,18 @@ section:nth-child(odd) {
   margin-right:0;
 }
 
+@media screen and (min-width: 764px) {
+  .footer-info {
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact {
+    flex: 2;
+  }
+
+  .sns {
+    flex: 1;
+  }
+}
